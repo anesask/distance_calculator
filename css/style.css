@@ -1,0 +1,147 @@
+* {
+    margin: auto;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    height: 96vh;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-size: cover;
+    background-position: top;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #000;
+}
+
+/* Clearfix */
+.row::after{
+    content: "";
+    display: table;
+    clear:both;
+}
+
+.header{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
+.header h1{
+    color: #19244e;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.container{
+    width: 65vw;
+    border-radius: 1rem;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.location-label{
+    font-size: 1.6rem;
+    float: left;
+    width: 25%;
+    margin-top: .6rem;
+}
+
+.location-input{
+    float: left;
+    width: 75%;
+    margin-top: .6rem;
+}
+
+.location-input::-webkit-input-placeholder {
+    color:#465caa;
+}
+
+::-moz-placeholder {
+    color: #465caa;
+}
+
+::-ms-placeholder {
+    color:#465caa;
+}
+
+::placeholder {
+    color:#465caa;
+}
+
+.button{
+    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    text-transform: uppercase;
+    text-decoration: none;
+    outline:none;
+    color: white;
+    padding: 1.2rem 2.2rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 1rem;
+    margin-right: .5rem;
+    transition: ease-in-out .1s;
+}
+
+.button:hover{    
+    background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+    transform: scale(1.015);
+    transition: ease-in .1s;
+}
+
+.result-table{
+    font-size: 1.6rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    height: 10rem;    
+
+    /* Animation */
+    animation-name: moveIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.container-map{
+    width: 100%;
+    height: 20rem;
+    margin: 1rem auto;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+}
+
+.footer p{
+    font-size: 1.6rem;
+    color: white;    
+}
+
+.footer a{
+    font-size: 1.6rem;
+    color: #465caa;
+    text-decoration: none;    
+}
+
+/* Animations */
+@keyframes moveIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-.5rem); }
+    
+    100% {
+      opacity: 1;
+      transform: translateY(0); } }
